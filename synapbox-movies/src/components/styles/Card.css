@@ -1,0 +1,47 @@
+.card
+{
+    border: none;
+    border-radius: 8px;
+}
+
+.Fitness-User-Info
+{
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
+
+.Fitness-Card
+{
+    margin: 1%;
+    max-width: 520px;
+    max-height: 140px;
+}
+
+.Fitness-Card-Info
+{
+    padding-left: 0;
+    padding-right: 75px;
+}
+
+.Fitness-Card-Info h1
+{
+    color: white;
+    font-size: 23px;
+}
+
+.Fitness-Card-Info p
+{
+    font-size: 11px;
+    color: white;
+}
+
+.Fitness-Add
+{
+    height: 60px;
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+}

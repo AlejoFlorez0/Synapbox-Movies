@@ -1,2 +1,2 @@
-# Synapbox-Movies_test
+# Synapbox-Movies
 Prueba técnica Frond-End para Synapbox
