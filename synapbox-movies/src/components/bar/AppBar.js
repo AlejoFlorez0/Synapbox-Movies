@@ -1,15 +1,17 @@
 import React from 'react';
+
+import PropTypes from 'prop-types';
+
 import AppBar from '@material-ui/core/AppBar';
+import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
+import SearchIcon from '@material-ui/icons/Search';
+import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
-import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
+import { fade, withStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(
-  (theme) => (
+const styles = theme =>(
   {
     root:
     {
@@ -71,40 +73,52 @@ const useStyles = makeStyles(
       }
     }
   }
-));
+);
 
-export default function SearchAppBar()
+class SearchAppBar extends React.Component
 {
-  const classes = useStyles();
+  render()
+  {
+    const { classes, onChange, search } = this.props;
 
-  return(
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-        
-          <Typography className={classes.title} variant="h6" noWrap>
-            Synapbox - Movie
-          </Typography>
+    return(
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+          
+            <Typography className={classes.title} variant="h6" noWrap>
+              Synapbox - Movie
+            </Typography>
 
-          <div className={classes.search}>
+            <div className={classes.search}>
 
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+
+              <InputBase
+                placeholder="Buscar"
+                onChange={onChange}
+                value={search}
+                classes={
+                {
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ 'aria-label': 'search' }}/>
+
             </div>
 
-            <InputBase
-              placeholder="Buscar"
-              classes={
-              {
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}/>
-
-          </div>
-
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
 }
+
+SearchAppBar.propTypes =
+{
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(SearchAppBar)

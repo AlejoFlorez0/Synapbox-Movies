@@ -1,57 +1,50 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
+
+import Card from '@material-ui/core/Card';  
+import Button from '@material-ui/core/Button';
+import CardMedia from '@material-ui/core/CardMedia';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
-const useStyles = makeStyles({
-  root:
-  {
-    maxWidth: 345,
-  },
-});
-
-//export default function ImgMediaCard()
 class ImgMediaCard extends React.Component
 {
-
   render()
   {
-    const { title, description, image, price} = this.props;
-
-    const classes = useStyles();
+    const { title, description,image, price} = this.props;
 
     return (
-      <Card className={classes.root}>
+      <Card>
         <CardActionArea>
           <CardMedia
             component="img"
             alt="Contemplative Reptile"
-            height="260"
-            image="https://epay.albany.edu/C21455_ustores/web/images/product-default-image.png"
+            height="300"
+            image={image}
             title="Contemplative Reptile"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Lizard
+              {title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
+              $ {price}
             </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
-            Share
+          <Button variant="contained" color="primary" size="medium">
+            Ver Detalles
           </Button>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
+          <IconButton
+            color="primary"
+            size="medium"
+            aria-label="Agregar a carrito de compras">
+              <AddShoppingCartIcon />
+          </IconButton>
         </CardActions>
       </Card>
     );
