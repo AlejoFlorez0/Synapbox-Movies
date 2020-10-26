@@ -1,3 +1,13 @@
+/**
+* @author AlejoFlorez0
+* Archivo Principl e la aplicación, desde que aquí se gestiona:
+* => La forma en la que se mostrará la página,
+* => Las renderizacíones que se apliquen
+* => Se gestiona estilos generales del contenedor
+* => Conexión mediante Apollo Client hacía la Api
+* => Variables generales (Hasta el momento solo una, Para la funcionalidad del filtro)
+*/
+
 import React from 'react';
 
 import PropTypes from 'prop-types';

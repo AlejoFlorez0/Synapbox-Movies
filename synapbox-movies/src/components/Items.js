@@ -1,3 +1,15 @@
+/**
+* @author AlejoFlorez0
+* Componente Funcional para gestionar la petición y respuesta de la API
+* Desde acá se cargan todos los items de la API, se obtienen y se crea 
+* una carta por cada item, se envia las propiedades, se gestiona el estilo 
+* y espaciado de cada componente, el filtro, la iteación y demás funcionalodades
+* => Estilos del contenedor de las cartas
+* => Información enviada hacía las cartas
+* => Obtener información de la API
+* => Mensaje de carga, error.
+*/
+
 import React from 'react';
 
 import Grid from '@material-ui/core/Grid';

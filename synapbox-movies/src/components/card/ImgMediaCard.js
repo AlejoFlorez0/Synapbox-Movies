@@ -1,4 +1,19 @@
+/**
+* @author AlejoFlorez0
+* Componente de carta para los items de pelicula
+* En este componente se mostrará la información obtenida
+* desde la API (Recibida en las Props) de un Item.
+* Tanto los estilos como la estrcutr general de la carta se gestionan desde acá
+* Es importante aclarar que tanto la funcionalidad de agregar al carrito
+* como la funcionalidad de ver detalles no estan terminadas, aunque se trabajo en ellas
+* no han sido terminadas, por lo tanto puede descartarlas
+* => Estilos unicamente de la barra de busqueda
+* => Estructura de l barra de busqueda
+*/
+
 import React from 'react';
+
+import modalInfo from './modal/ModalInfo';
 
 import Card from '@material-ui/core/Card';  
 import Button from '@material-ui/core/Button';

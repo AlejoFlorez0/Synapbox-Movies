@@ -1,3 +1,12 @@
+/**
+* @author AlejoFlorez0
+* Componente de la barra de busqueda, se recibe a variable de busqueda y el evento
+* para el cambio de valor en la busqueda
+* Acá se maneja los estilos y la estructua pra la barra de busqueda, se gestiona:
+* => Estilos unicamente de la barra de busqueda
+* => Estructura de l barra de busqueda
+*/
+
 import React from 'react';
 
 import PropTypes from 'prop-types';
