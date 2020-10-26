@@ -1,2 +1,5 @@
 # Synapbox-Movies
-Prueba técnica Frond-End para Synapbox
+
+Instalar dependencias y ejecutar luego el comando
+
+npm start
